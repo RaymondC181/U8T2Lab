@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Algorithm2DArrays {
 
     /** Return true if target is found in the 2D array arr, false otherwise.
@@ -170,8 +172,39 @@ public class Algorithm2DArrays {
      */
     public static String[][] gridOfXandO(int n)
     {
+        String[][] arr = new String[n][n];
+        String str = "X";
+        for(int row = 0; row<arr.length; row++)
+        {
+            for (int col = 0; col < arr[0].length; col++)
+            {
+                arr[row][col] = str;
+                if(str == "X")
+                {
+                    str = "O";
+                }
+                else
+                {
+                    str = "X";
+                }
+            }
+        }
+        return arr;
+    }
+
+    /** Searches through the 2D array wordChart and finds all strings with
+     *  length len; these strings are added to an ArrayList and returned.
+     *  If no strings have that length, return an empty ArrayList
+     *
+     *  @param wordChart  2D array of Strings
+     *  @param len  the length of strings to search for
+     *  @return  an ArrayList containing all strings in wordChart with length len
+     */
+    public static ArrayList<String> findStringsOfLength(String[][] wordChart, int len)
+    {
 
     }
+
 
 
 
