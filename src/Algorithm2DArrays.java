@@ -202,13 +202,19 @@ public class Algorithm2DArrays {
      */
     public static ArrayList<String> findStringsOfLength(String[][] wordChart, int len)
     {
-
+        ArrayList<String> strArr = new ArrayList<>();
+        for(String[] row : wordChart)
+        {
+            for(String element : row)
+            {
+                if(element.length() == len)
+                {
+                    strArr.add(element);
+                }
+            }
+        }
+        return strArr; 
     }
-
-
-
-
-
 
 
 }
