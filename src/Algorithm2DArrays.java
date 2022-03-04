@@ -110,8 +110,69 @@ public class Algorithm2DArrays {
      */
     public static int sumForColumn(int[][] arr, int col)
     {
-        
+        int sum = 0;
+        for(int row = 0; row<arr.length; row++)
+        {
+            sum+= arr[row][col];
+        }
+        return sum;
     }
+
+    /** Creates a 2D array of ints of size n x m, where n is number of rows and
+     *  m is number of columns; the elements in the 2D array should be numbered 0
+     *  through n x m - 1, with the numbers filled top to bottom, left to right.
+     *  The method prints the 2D array "grid" of numbers, and also returns
+     *  the 2D array.
+     *
+     *  For example, for rows = 3 and cols = 4, this method should print
+     *  (and return):
+     *  0 1 2 3
+     *  4 5 6 7
+     *  8 9 10 11
+     *
+     *  Print each element with a single space in between.
+     *
+     *  @param rows  number of rows
+     *  @param cols  number of columns
+     *  @return  the same 2D array "number grid" that gets printed by the method
+     */
+    public static int[][] printNumberGrid(int rows, int cols)
+    {
+        int num = 0;
+        int[][] arr = new int[rows][cols];
+        for(int row = 0; row<arr.length; row++)
+        {
+            for (int col = 0; col < arr[0].length; col++)
+            {
+                arr[row][col] = num;
+                System.out.print(arr[row][col] + " ");
+                num++;
+            }
+            System.out.println();
+        }
+        return arr;
+    }
+
+    /** Creates and returns a square 2D array of Strings of size n x n; the
+     *  elements in the 2D array alternate between "X" and "O" (letter),
+     *  starting with "X"
+     *
+     *  For example, if n = 5, this method should return the following 2D array
+     *  (with 5 rows and 5 columns):
+     *  X O X O X
+     *  O X O X O
+     *  X O X O X
+     *  O X O X O
+     *  X O X O X
+     *
+     *  @param n  number of rows and columns (creating a square 2D array of size n x n)
+     *  @return  a 2D array of Strings that alternate between "X" and "O"
+     */
+    public static String[][] gridOfXandO(int n)
+    {
+
+    }
+
 
 
 

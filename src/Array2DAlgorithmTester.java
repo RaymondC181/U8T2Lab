@@ -2,11 +2,16 @@ public class Array2DAlgorithmTester
 {
     public static void main(String[] args)
     {
-        int[][] testArr4 = {{1, 2, 3, 4, 5}, {6, 7, 8, 9, 10}, {4, 6, 8, 3, 5}};
-        System.out.println(Algorithm2DArrays.sumForColumn(testArr4, 0));
-        System.out.println(Algorithm2DArrays.sumForColumn(testArr4, 1));
-        System.out.println(Algorithm2DArrays.sumForColumn(testArr4, 2));
-        System.out.println(Algorithm2DArrays.sumForColumn(testArr4, 3));
-        System.out.println(Algorithm2DArrays.sumForColumn(testArr4, 4));
+        String[][] xoGrid = Algorithm2DArrays.gridOfXandO(7);
+
+        for (String[] row : xoGrid)
+        {
+            for (String val : row)
+            {
+                System.out.print(val + " ");
+            }
+            System.out.println();
+        }
     }
 }
+
